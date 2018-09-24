@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button } from 'react-bootstrap';
+import "../node_modules/jquery/dist/jquery.min.js";
+import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import './components/style947.css';
 
 class App extends Component {
   render() {
+    const { isAuthenticated } = this.props.auth;
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header className="App-header container">
+          <h1 className="App-title">Welcome to Radio Bingo</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div className="App-intro container">
+          If you are looking for fun and the chance to win fantastic prizes all
+          whilst listening the radio, you have come to the right place!
+        </div>
+
+        <div className="App-signin container">
+          <Button className="btn btn-primary"
+            type="submit"
+            block
+          >
+            Sign In
+          </Button>
+        </div>
+
+        <div className="App-signup container">
+          <Button className="btn btn-primary"
+            type="submit"
+            block
+          >
+            Sign Up
+          </Button>
+        </div>
+
       </div>
     );
   }
